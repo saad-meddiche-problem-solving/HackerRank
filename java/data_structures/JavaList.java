@@ -39,6 +39,7 @@ public class JavaList {
             } else {
                 List<Integer> x = transformStringToInts(query.integers);
                 mainList.remove((int) x.get(0));
+
             }
         }
 
