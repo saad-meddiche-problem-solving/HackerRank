@@ -1,4 +1,4 @@
-package java.introduction.v7;
+package jjava.introduction.v7;
 
 public class WelcomeToJava {
     public static void main(String[] args) {

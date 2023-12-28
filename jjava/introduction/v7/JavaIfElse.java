@@ -1,4 +1,4 @@
-package java.introduction.v7;
+package jjava.introduction.v7;
 
 import java.util.Scanner;
 

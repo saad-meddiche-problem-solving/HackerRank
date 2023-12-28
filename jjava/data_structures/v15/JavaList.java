@@ -1,4 +1,4 @@
-package java.data_structures.v15;
+package jjava.data_structures.v15;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,10 @@
-package java.introduction.v15;
+package jjava.introduction.v15;
 
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
+// https://www.hackerrank.com/challenges/java-loops-i/problem?isFullScreen=true
 
 public class JavaLoops1 {
 
