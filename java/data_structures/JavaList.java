@@ -1,4 +1,4 @@
-package hackerRankProblemSolving;
+package java.data_structures;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +11,6 @@ public class JavaList {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-
-        Integer initialNumberOfElements = scan.nextInt();
 
         scan.nextLine();
         String spaceSeparatedIntegers = scan.nextLine();
