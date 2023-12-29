@@ -4,6 +4,7 @@ import java.io.*;
 import java.math.*;
 import java.security.*;
 import java.text.*;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.function.*;
@@ -58,6 +59,11 @@ class Result {
 
         return cal.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.ENGLISH).toUpperCase();
 
+    }
+
+    public static String findDay2(int month, int day, int year) {
+        LocalDate date = LocalDate.of( year, month, day );
+        return date.getDayOfWeek().name().toUpperCase();
     }
 
 }
