@@ -20,12 +20,11 @@ public class JavaCurrencyFormatter {
 
         NumberFormat frensh = NumberFormat.getCurrencyInstance(Locale.FRANCE);
 
-        System.out.println(us.format(amount));
-        System.out.println(india.format(amount));
-        System.out.println(china.format(amount));
-        System.out.println(frensh.format(amount));
+        System.out.println("US: " + us.format(amount));
+        System.out.println("India: " + india.format(amount));
+        System.out.println("China: " + china.format(amount));
+        System.out.println("France: " + frensh.format(amount));
 
     }
-
 
 }
