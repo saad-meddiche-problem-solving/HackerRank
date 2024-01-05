@@ -1,4 +1,4 @@
-package jjava.introduction.v15;
+package jjava.introduction.v7;
 
 import java.text.NumberFormat;
 import java.util.Locale;
