@@ -3,6 +3,7 @@ package jjava.introduction.v15;
 import java.util.Scanner;
 
 // https://www.hackerrank.com/challenges/java-output-formatting/problem
+// https://www.w3schools.com/java/ref_string_format.asp
 public class JavaOutputFormatting {
 
     private static final int STRING_COLUMN_LENGTH = 15;
