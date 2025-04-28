@@ -4,38 +4,17 @@ import java.util.Scanner;
 
 public class Java1DArrayPart2 {
 
-    public static boolean canWin(int leap, int[] game ) {
+    public static boolean canWin(int leap, int[] game) {
+        return test(0,game,leap);
+    }
 
-        int n = game.length;
+    public static boolean test(int i, int[] game, int leap) {
 
-        int currentindex = 0;
+        if(i < 0 || game[i] == 1) return false;
+        if(i == game.length - 1 || i + leap >= game.length ) return true;
 
-        do {
-
-            if(currentindex + leap >= n) return true;
-
-            if(currentindex == n - 1) return true;
-
-            if(currentindex + leap < n && game[currentindex + leap] == 0) {
-                currentindex += leap;
-                continue;
-            }
-
-            if(currentindex + 1 < n && game[currentindex + 1] == 0) {
-                currentindex += 1;
-                continue;
-            }
-
-            if(currentindex - 1 > 0 && game[currentindex - 1] == 0) {
-                currentindex -= 1;
-                continue;
-            }
-
-            break;
-
-        } while (currentindex < n);
-
-        return false;
+        game[i] = 1;
+        return test(i+1,game,leap) || test(i+leap,game,leap) || test(i-1,game,leap);
     }
 
     public static void main(String[] args) {
