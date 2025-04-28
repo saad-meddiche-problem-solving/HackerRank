@@ -2,6 +2,7 @@ package jjava.data_structures.v15;
 
 import java.util.Scanner;
 
+// https://www.hackerrank.com/challenges/java-1d-array/problem
 public class Java1DArrayPart2 {
 
     public static boolean canWin(int leap, int[] game) {
