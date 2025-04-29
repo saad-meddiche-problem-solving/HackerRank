@@ -13,36 +13,30 @@ public class JavaDequeue {
         int n = in.nextInt();
         int m = in.nextInt();
 
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = in.nextInt();
-        }
-
         Deque<Integer> deque = new ArrayDeque<>();
+        Set<Integer> set = new HashSet<>();
 
-        for(int i = 0 ; i < m ; i++)
-            deque.add(arr[i]);
+        for (int i = 0; i < n; i++) {
 
-        updateUniqueNumbers(deque);
+            int num = in.nextInt();
 
-        for(int i = m ; i < arr.length ; i++) {
-            deque.removeFirst();
-            deque.addLast(arr[i]);
+            deque.addLast(num);
+            set.add(num);
 
-            updateUniqueNumbers(deque);
+            if(deque.size() == m) {
+
+                if(set.size() > uniqueNumbers)
+                    uniqueNumbers = set.size();
+
+                int first = deque.removeFirst();
+
+                if(!deque.contains(first)) set.remove(first);
+
+            }
+
         }
 
         System.out.println(uniqueNumbers);
-
-    }
-
-    public static void updateUniqueNumbers(Deque<Integer> deque) {
-
-        Set<Integer> set = new HashSet<>(deque);
-
-        int size = set.size();
-
-        if(uniqueNumbers < size) uniqueNumbers = size;
 
     }
 
