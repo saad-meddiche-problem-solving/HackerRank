@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
+// https://www.hackerrank.com/challenges/java-comparator/problem
 public class JavaComparator {
 
     public static void main(String[] args) {
