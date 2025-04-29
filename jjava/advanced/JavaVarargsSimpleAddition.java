@@ -1,4 +1,4 @@
-package jjava.data_structures.v7;
+package jjava.advanced;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
