@@ -1,9 +1,6 @@
 package jjava.data_structures.v15;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 // https://www.hackerrank.com/challenges/java-stack/problem
 public class JavaStack {
@@ -34,29 +31,32 @@ public class JavaStack {
 
     public static boolean isStringBalanced(String string) {
 
-        if(string.isEmpty()) return true;
+        if(string.isEmpty() || string.isBlank()) return true;
 
         if(isEven(string.length())) return false;
 
-        int length = string.length();
-        int halfLength = length / 2;
-
-        char[] arrChar = string.toCharArray();
-
-        Stack<Integer> leftSide = new Stack<>();
-        for(int i = 0 ; i < halfLength ; i++) {
-            leftSide.add(book.get(arrChar[i]));
+        List<Integer> list = new ArrayList<>();
+        for(char c : string.toCharArray()) {
+            list.add(book.get(c));
         }
 
-        Stack<Integer> rightSide = new Stack<>();
-        for(int i = length -1 ; i >= halfLength ; i--) {
-            rightSide.add(book.get(arrChar[i]));
+        if(isClose(list.get(0))) return false;
+
+        if(isOpen(list.get(list.size() - 1))) return false;
+
+        Stack<Integer> stack = new Stack<>();
+        for(Integer i : list){
+
+            if(isOpen(i)) {
+                stack.add(i);
+            }
+
+            if(isClose(i)) {
+                if(stack.isEmpty()) return false;
+                if(!isValid(stack.pop(),i)) return false;
+            }
+
         }
-
-        if(isClose(leftSide.firstElement())) return false;
-
-        if(isOpen(rightSide.firstElement())) return false;
-
 
         return true;
     }
