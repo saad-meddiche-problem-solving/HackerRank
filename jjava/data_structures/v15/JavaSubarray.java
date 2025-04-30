@@ -27,18 +27,17 @@ public class JavaSubarray {
     public static void theSub(int dequeSize, List<Integer> list) {
         Deque<Integer> deque = new ArrayDeque<>();
 
-        int sum = 0;
         for(Integer num : list) {
 
             deque.addLast(num);
-            sum += num;
 
             if(deque.size() == dequeSize) {
+
+                int sum = dequeSum(deque);
 
                 if(sum < 0)
                     negativeSumsCount++;
 
-                sum = 0;
                 deque.removeFirst();
             }
 
@@ -47,6 +46,14 @@ public class JavaSubarray {
         if(dequeSize > 0)
             theSub(dequeSize - 1 , list);
 
+    }
+
+    public static int dequeSum(Deque<Integer> deque) {
+        int sum = 0;
+        for(int i : deque) {
+            sum += i;
+        }
+        return sum;
     }
 
 }
