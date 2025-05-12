@@ -1,4 +1,4 @@
-package jjava.advanced;
+package jjava.advanced.v7;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

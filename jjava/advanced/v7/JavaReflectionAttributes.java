@@ -1,4 +1,4 @@
-package jjava.advanced;
+package jjava.advanced.v7;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
