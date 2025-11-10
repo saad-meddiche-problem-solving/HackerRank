@@ -27,7 +27,7 @@ class Result {
     public static String dayOfProgrammer(int year) {
 
         // Day of transition
-        if(year == 1918) return "26.09.1948";
+        if(year == 1918) return "26.09.1918";
 
         Calendar calendarSystem = Result.determineCalendarSystem(year);
 
