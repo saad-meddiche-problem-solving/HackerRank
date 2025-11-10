@@ -24,7 +24,7 @@ public class MigratoryBirds {
                 arr.add(arrItem);
             }
 
-            int result = Result.migratoryBirds(arr);
+            int result = MigratoryBirdsResult.migratoryBirds(arr);
 
             bufferedWriter.write(String.valueOf(result));
             bufferedWriter.newLine();
@@ -35,7 +35,7 @@ public class MigratoryBirds {
 
 }
 
-class Result {
+class MigratoryBirdsResult {
 
     /*
      * Complete the 'migratoryBirds' function below.
