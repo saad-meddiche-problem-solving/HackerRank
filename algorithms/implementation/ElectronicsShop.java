@@ -10,23 +10,21 @@ class ElectronicsShopResult {
 
     public static int getMoneySpent(int[] keyboards, int[] drives, int b) {
 
-        int[] cases = new int[keyboards.length * drives.length];
+        Arrays.sort(keyboards);
+        Arrays.sort(drives);
 
-        for(int i = keyboards.length - 1; i >= 0; i--) {
-            for(int j = drives.length - 1; j >= 0; j--) {
-                int sum = keyboards[i] + drives[j];
+        int moneySpent = -1;
+
+        for(int k = keyboards.length - 1; k >= 0; k--) {
+            for(int d = drives.length - 1; d >= 0; d--) {
+                int sum = keyboards[k] + drives[d];
                 if(sum <= b) {
-                    cases[i * drives.length + j] = sum;
-                }
-                else {
-                    cases[i * drives.length + j] = -1;
+                    moneySpent  = Math.max(moneySpent, sum);
                 }
             }
         }
 
-        Arrays.sort(cases);
-
-        return cases[cases.length - 1];
+        return moneySpent;
 
     }
 
