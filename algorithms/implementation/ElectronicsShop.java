@@ -10,13 +10,6 @@ class ElectronicsShopResult {
 
     public static int getMoneySpent(int[] keyboards, int[] drives, int b) {
 
-        Arrays.sort(keyboards);
-        Arrays.sort(drives);
-
-        if(keyboards[0] + drives[0] > b) return -1;
-
-        if(keyboards[0] + drives[0] == b) return b;
-
         int[] cases = new int[keyboards.length * drives.length];
 
         for(int i = keyboards.length - 1; i >= 0; i--) {
