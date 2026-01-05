@@ -1,0 +1,1 @@
+SELECT DISTINCT s.City FROM STATION s WHERE LEFT(s.City, 1) NOT IN ('A','E','I','O','U');
