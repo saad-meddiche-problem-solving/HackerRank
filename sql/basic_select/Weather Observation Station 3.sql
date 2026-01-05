@@ -1,0 +1,1 @@
+SELECT s.City FROM STATION s WHERE MOD(s.Id,2) = 0 GROUP BY s.City;
