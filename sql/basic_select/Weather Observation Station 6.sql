@@ -1,0 +1,1 @@
+SELECT s.City FROM STATION s WHERE LEFT(s.City, 1) IN ('A','E','I','O','U') GROUP BY s.City;
