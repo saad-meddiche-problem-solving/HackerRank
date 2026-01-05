@@ -1,0 +1,1 @@
+SELECT city.name FROM CITY city WHERE city.CountryCode = 'USA' AND city.Population > 120000;
