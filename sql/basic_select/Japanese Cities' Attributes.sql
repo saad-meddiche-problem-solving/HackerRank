@@ -1,0 +1,1 @@
+SELECT * FROM CITY city WHERE city.CountryCode = 'JPN';
