@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/java/pom.xml" />
+        <option value="$PROJECT_DIR$/testing_ground/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
