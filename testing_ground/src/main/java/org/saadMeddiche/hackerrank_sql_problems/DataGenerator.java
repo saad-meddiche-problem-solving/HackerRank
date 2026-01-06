@@ -17,7 +17,7 @@ public class DataGenerator {
             INSERT INTO occupations (name, occupation) VALUES (?, ?)
             """;
 
-    private final static String[] OCCUPATIONS = {"Doctor","Professor","Singer ","Actor"};
+    private final static String[] OCCUPATIONS = {"Doctor","Professor","Singer","Actor"};
 
     public static void main( String[] args ) throws SQLException {
 
