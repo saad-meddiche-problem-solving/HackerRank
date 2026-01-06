@@ -2,6 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/sql/advanced_select/Binary Tree Nodes.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/sql/advanced_select/New Companies.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/sql/basic_select/Weather Observation Station 10.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/sql/basic_select/Weather Observation Station 11.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/sql/basic_select/Weather Observation Station 12.sql" dialect="GenericSQL" />
