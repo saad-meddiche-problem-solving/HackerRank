@@ -1,0 +1,7 @@
+SELECT count(*) / 2 INTO @center FROM STATION;
+
+WITH tb AS (
+    SELECT LAT_N, ROW_NUMBER() OVER (ORDER BY LAT_N) AS row_num FROM STATION
+)
+
+SELECT ROUND(LAT_N, 4) FROM tb WHERE row_num = @center;
